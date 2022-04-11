@@ -16,6 +16,15 @@ function Phase3() {
   const eleventhWeek = days.filter(day => day > 162 && day < 170);
   const twelfthWeek = days.filter(day => day > 169 && day < 177);
   const thirteenthWeek = days.filter(day => day > 176 && day < 184);
+  
+  function finishDay ({ target }) {
+    if (target.className !== "table-background") {
+      return target.className="table-background";
+    } else {
+      return target.className="pink-background";
+    }
+  }
+
   return (
     <div className='pink'>
       <h3>Phase 3 - Developing your active skills:</h3>
@@ -24,47 +33,47 @@ function Phase3() {
       <table className="table-background">
         <tbody>
           <tr>
-            { firstWeek.map(day => <td>{ day }</td>) }
+            { firstWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { secondWeek.map(day => <td>{ day }</td>) }
+            { secondWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { thirdWeek.map(day => <td>{ day }</td>) }
+            { thirdWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { fourthWeek.map(day => <td>{ day }</td>) }
+            { fourthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { fifthWeek.map(day => <td>{ day }</td>) }
+            { fifthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { sixthWeek.map(day => <td>{ day }</td>) }
+            { sixthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { seventhWeek.map(day => <td>{ day }</td>) }
+            { seventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { eighthWeek.map(day => <td>{ day }</td>) }
+            { eighthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { ninthWeek.map(day => <td>{ day }</td>) }
+            { ninthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { tenthWeek.map(day => <td>{ day }</td>) }
+            { tenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { eleventhWeek.map(day => <td>{ day }</td>) }
+            { eleventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { twelfthWeek.map(day => <td>{ day }</td>) }
+            { twelfthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { thirteenthWeek.map(day => <td>{ day }</td>) }
+            { thirteenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
         </tbody>
       </table>
-      <h5>Total: 90 days(12,8 weeks).</h5>
+      <h5>Total: 90 days(12,5 weeks).</h5>
     </div>
   )
 }

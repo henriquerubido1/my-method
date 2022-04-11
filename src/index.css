@@ -6,12 +6,24 @@ body {
   color: #39FF14;
 }
 
+.green-background {
+  background-color: #39FF14;
+}
+
 .cyan {
   color: cyan;
 }
 
+.cyan-background {
+  background-color: cyan;
+}
+
 .pink {
   color: #ff69b4;
+}
+
+.pink-background {
+  background-color: #ff69b4;
 }
 
 .table-background {

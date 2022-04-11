@@ -5,6 +5,15 @@ function Phase1() {
   const days = primaryDays.slice(1);
   const firstWeek = days.filter(day => day < 8);
   const secondWeek = days.filter(day => day > 7);
+
+  function finishDay ({ target }) {
+    if (target.className !== "table-background") {
+      return target.className="table-background";
+    } else {
+      return target.className="green-background";
+    }
+  }
+
   return (
     <div className='green'>
       <h3>Phase 1 - Learning your very first words and sentence structures:</h3>
@@ -12,10 +21,10 @@ function Phase1() {
       <table className="table-background">
         <tbody>
           <tr>
-            { firstWeek.map(day => <td>{ day }</td>) }
+            { firstWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
           <tr>
-            { secondWeek.map(day => <td>{ day }</td>) }
+            { secondWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
           </tr>
         </tbody>
       </table>
