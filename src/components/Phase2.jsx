@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Phase2() {
+  const [display, setDisplay] = useState(false);
   const primaryDays = [...Array(91).keys()];
   const days = primaryDays.slice(15);
   const firstWeek = days.filter(day => day < 22);
@@ -15,6 +16,10 @@ function Phase2() {
   const tenthWeek = days.filter(day => day > 77 && day < 85);
   const eleventhWeek = days.filter(day => day > 84 && day < 91);
 
+  function displaySection () {
+    setDisplay(!display);
+  }
+
   function finishDay ({ target }) {
     if (target.className !== "table-background") {
       return target.className="table-background";
@@ -25,46 +30,51 @@ function Phase2() {
 
   return (
     <div className='cyan'>
-      <h3>Phase 2 - Building your basis in the foreign language:</h3>
-      <p>From now on, you will start using <a href="https://www.lingq.com/en/">LingQ</a> every single day during your way to B2 level. In this phase, your goal is to earn 1500 coins (30x streak) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
-      <table className="table-background">
-        <tbody>
-          <tr>
-            { firstWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { secondWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { thirdWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { fourthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { fifthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { sixthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { seventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { eighthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { ninthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { tenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { eleventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-        </tbody>
-      </table>
-      <h5>Total: 76 days(10,8 weeks).</h5>
+      <h2 className="table-background" onClick={ displaySection }>Phase 2</h2>
+      { display && (
+      <>
+        <h3>Building your basis in the foreign language:</h3>
+        <p>From now on, you will start using <a href="https://www.lingq.com/en/">LingQ</a> every single day during your way to B2 level. In this phase, your goal is to earn 1500 coins (30x streak) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
+        <table className="table-background">
+          <tbody>
+            <tr>
+              { firstWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { secondWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { thirdWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { fourthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { fifthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { sixthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { seventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { eighthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { ninthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { tenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { eleventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+          </tbody>
+        </table>
+        <h5>Total: 76 days(10,8 weeks).</h5>
+      </>
+      )}
     </div>
   )
 }
