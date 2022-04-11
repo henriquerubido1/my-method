@@ -34,7 +34,7 @@ function Phase2() {
       { display && (
       <>
         <h3>Building your basis in the foreign language:</h3>
-        <p>From now on, you will start using <a href="https://www.lingq.com/en/">LingQ</a> every single day during your way to B2 level. In this phase, your goal is to earn 1500 coins (30x streak) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
+        <p>From now on, you will start using <a href="https://www.lingq.com/en/">LingQ</a> every single day during your way to C1 level. In this phase, your goal is to earn 1500 coins (30x streak) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
         <table className="table-background">
           <tbody>
             <tr>

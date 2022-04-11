@@ -26,6 +26,14 @@ body {
   background-color: #ff69b4;
 }
 
+.white {
+  color: white;
+}
+
+.white-background {
+  background-color: white;
+}
+
 .table-background {
   background-color: #242526;
 }
