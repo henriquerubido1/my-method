@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Phase4() {
   const [display, setDisplay] = useState(false);
@@ -31,6 +31,7 @@ function Phase4() {
   const twentyFifthWeek = days.filter(day => day > 348 && day < 356);
   const twentySixthWeek = days.filter(day => day > 355 && day < 363);
   const twentySeventhWeek = days.filter(day => day > 362 && day < 366);
+  const getFinishedDays = localStorage.getItem('finishedDays4');
 
   function displaySection () {
     setDisplay(!display);
@@ -38,11 +39,76 @@ function Phase4() {
 
   function finishDay ({ target }) {
     if (target.className !== "table-background") {
+      localStorage.setItem('finishedDays4', target.innerHTML - 1)
       return target.className="table-background";
     } else {
+      localStorage.setItem('finishedDays4', target.innerHTML);
       return target.className="white-background";
     }
   }
+
+  const filterDays = firstWeek.filter((day) => day <= getFinishedDays);
+  const filterDays2 = secondWeek.filter((day) => day <= getFinishedDays);
+  const filterDays3 = thirdWeek.filter((day) => day <= getFinishedDays);
+  const filterDays4 = fourthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays5 = fifthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays6 = sixthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays7 = seventhWeek.filter((day) => day <= getFinishedDays);
+  const filterDays8 = eighthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays9 = ninthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays10 = tenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays11 = eleventhWeek.filter((day) => day <= getFinishedDays);
+  const filterDays12 = twelfthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays13 = thirteenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays14 = fourteenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays15 = fifteenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays16 = sixteenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays17 = seventeenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays18 = eighteenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays19 = nineteenthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays20 = twentiethWeek.filter((day) => day <= getFinishedDays);
+  const filterDays21 = twentyFirstWeek.filter((day) => day <= getFinishedDays);
+  const filterDays22 = twentySecondWeek.filter((day) => day <= getFinishedDays);
+  const filterDays23 = twentyThirdWeek.filter((day) => day <= getFinishedDays);
+  const filterDays24 = twentyFourthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays25 = twentyFifthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays26 = twentySixthWeek.filter((day) => day <= getFinishedDays);
+  const filterDays27 = twentySeventhWeek.filter((day) => day <= getFinishedDays);
+  const finishedDays = [
+    ...filterDays,
+    ...filterDays2,
+    ...filterDays3,
+    ...filterDays4,
+    ...filterDays5,
+    ...filterDays6,
+    ...filterDays7,
+    ...filterDays8,
+    ...filterDays9,
+    ...filterDays10,
+    ...filterDays11,
+    ...filterDays12,
+    ...filterDays13,
+    ...filterDays14,
+    ...filterDays15,
+    ...filterDays16,
+    ...filterDays17,
+    ...filterDays18,
+    ...filterDays19,
+    ...filterDays20,
+    ...filterDays21,
+    ...filterDays22,
+    ...filterDays23,
+    ...filterDays24,
+    ...filterDays25,
+    ...filterDays26,
+    ...filterDays27
+  ];
+
+  useEffect(() => {
+    if (display === true) {
+      finishedDays.forEach(day => document.getElementById(day).className="white-background")
+    }
+  }, [finishedDays])
 
   return (
     <div className='white'>
@@ -52,88 +118,88 @@ function Phase4() {
         <h3>Getting rid of your flaws:</h3>
         <p>It's time to broaden your horizons! Now you can already talk about different topics effortlesly, but your vocabulary is still limited to what you got in contact with and you still make a fair amount of mistakes. In order to reach higher levels, your approach is going to be quite different from the beginning. Your new focus is going to be on getting in contact with topics you haven't before, improving your speech, writing and pronunciation and stop making mistakes that native speakers wouldn't do. Now is a good time to think about changing tutors on <a href="https://www.italki.com/">Italki</a> and choosing a teacher who can do test preparations. Your goal is not to prepare for any test, but those teachers tend to be very picky with all of your mistakes, which is fundamental for this phase.</p>
         <p>Your daily task on <a href="https://www.lingq.com/en/">LingQ</a> is going to be the same, but now you need to choose lessons with new topics and advanced language. Besides that, your weekly writing task is to write one or two essays about those new topics. You should also watch a couple of YouTube videos about common pronunciation mistakes and try to fix them in your 45-minute classes twice a week.</p>
-        <table className="table-background">
+        <table className={ getFinishedDays === '365' ? "white-background" : "table-background"}>
           <tbody>
             <tr>
-              { firstWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { firstWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { secondWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { secondWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { thirdWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { thirdWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fourthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fourthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fifthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fifthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { sixthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { sixthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { seventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { seventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eighthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eighthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { ninthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { ninthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { tenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { tenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eleventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eleventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twelfthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twelfthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { thirteenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { thirteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fourteenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fourteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fifteenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fifteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { sixteenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { sixteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { seventeenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { seventeenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eighteenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eighteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { nineteenthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { nineteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentiethWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentiethWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyFirstWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyFirstWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentySecondWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentySecondWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyThirdWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyThirdWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyFourthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyFourthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyFifthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyFifthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentySixthWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentySixthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentySeventhWeek.map(day => <td className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentySeventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
             </tr>
           </tbody>
         </table>
