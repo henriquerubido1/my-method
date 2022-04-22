@@ -119,7 +119,7 @@ function Phase4() {
         <p className="text-center">It's time to broaden your horizons! Now you can already talk about different topics effortlesly, but your vocabulary is still limited to what you got in contact with and you still make a fair amount of mistakes. In order to reach higher levels, your approach is going to be quite different from the beginning. Your new focus is going to be on getting in contact with topics you haven't before, improving your speech, writing and pronunciation and stop making mistakes that native speakers wouldn't do. Now is a good time to think about changing tutors on <a href="https://www.italki.com/" className="text-purple hover:underline">Italki</a> and choosing a teacher who can do test preparations. Your goal is not to prepare for any test, but those teachers tend to be very picky with all of your mistakes, which is fundamental for this phase.</p>
         <br />
         <p  className="text-center p-3">Your daily task on <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> is going to be the same, but now you need to choose lessons with new topics and advanced language. Besides that, your weekly writing task is to write one or two essays about those new topics. You should also watch a couple of YouTube videos about common pronunciation mistakes and try to fix them in your 45-minute classes twice a week.</p>
-        <table className={ getFinishedDays === '365' ? "bg-gray-light" : "bg-gray-dark"}>
+        <table className={ getFinishedDays === '365' ? "bg-gray-light mt-8" : "bg-gray-dark mt-8"}>
           <tbody>
             <tr>
               { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }

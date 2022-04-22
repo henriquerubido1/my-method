@@ -69,7 +69,7 @@ function Phase2() {
       <>
         <h3 className="text-center p-3">Building your basis in the foreign language</h3>
         <p className="text-center">From now on, you will start using <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> every single day during your way to C1 level. In this phase, your goal is to earn 1500 coins (30x streak) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
-        <table className={ getFinishedDays === '90' ? "bg-blue" : "bg-gray-dark"}>
+        <table className={ getFinishedDays === '90' ? "bg-blue m-8" : "bg-gray-dark m-8"}>
           <tbody>
             <tr>
               { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }

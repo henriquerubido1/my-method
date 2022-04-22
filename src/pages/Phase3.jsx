@@ -75,7 +75,7 @@ function Phase3() {
       <>
         <h3 className="text-center p-3">Developing your active skills</h3>
         <p className="text-center">Now you already have a basis in the language and you already understand around half of what we can call here as “real conversations”. Now is the time for you to start developing your active skills, which are speaking and writing. In order to do that, you need to start practicing them. You are still going to keep up with your <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> daily goal. Besides that, you are going to have conversation classes with a native speaker for 30 or 45 minutes per week on <a href="https://www.italki.com" className="text-purple hover:underline">Italki</a>. You should choose a teacher/tutor that offers you writing corrections, so you can write small texts each week in order to practice writing, too. At this point, you might realize that there are some essential words you don’t know yet. For those words you can use <a href="https://apps.ankiweb.net" className="text-purple hover:underline">Anki</a> to really make those words stick to your memory. But remember you should only choose those words you wanted to say/write in your classes/writings, but you couldn’t. Those are the words you lack!</p>
-        <table className={ getFinishedDays === '180' ? "bg-red" : "bg-gray-dark p-5"}>
+        <table className={ getFinishedDays === '180' ? "bg-red mt-8" : "bg-gray-dark mt-8"}>
           <tbody>
             <tr>
               { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }

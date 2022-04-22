@@ -13,7 +13,7 @@ module.exports = {
       'slate': '#0f172a',
       'gray-dark': '#273444',
       'gray': '#8492a6',
-      'gray-light': '#d3dce6'
+      'gray-light': '#94a3b8'
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
