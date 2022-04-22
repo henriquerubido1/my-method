@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../style.css';
 
 function Phase1() {
   const [display, setDisplay] = useState(true);
