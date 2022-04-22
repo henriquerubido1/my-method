@@ -38,12 +38,12 @@ function Phase4() {
   }
 
   function finishDay ({ target }) {
-    if (target.className !== "table-background") {
+    if (target.className !== "bg-gray-dark  p-5") {
       localStorage.setItem('finishedDays4', target.innerHTML - 1)
-      return target.className="table-background";
+      return target.className="bg-gray-dark  p-5";
     } else {
       localStorage.setItem('finishedDays4', target.innerHTML);
-      return target.className="white-background";
+      return target.className="bg-gray-light  p-5";
     }
   }
 
@@ -106,104 +106,105 @@ function Phase4() {
 
   useEffect(() => {
     if (display === true) {
-      finishedDays.forEach(day => document.getElementById(day).className="white-background")
+      finishedDays.forEach(day => document.getElementById(day).className="bg-gray-light  p-5")
     }
   }, [finishedDays])
 
   return (
-    <div className='white'>
-      <h2 className="table-background" onClick={ displaySection }>Phase 4</h2>
+    <div className="text-gray-light w-3/6">
+      <h2 className="bg-gray-dark text-center" onClick={ displaySection }>Phase 4</h2>
       { display &&(
       <>
-        <h3>Getting rid of your flaws:</h3>
-        <p>It's time to broaden your horizons! Now you can already talk about different topics effortlesly, but your vocabulary is still limited to what you got in contact with and you still make a fair amount of mistakes. In order to reach higher levels, your approach is going to be quite different from the beginning. Your new focus is going to be on getting in contact with topics you haven't before, improving your speech, writing and pronunciation and stop making mistakes that native speakers wouldn't do. Now is a good time to think about changing tutors on <a href="https://www.italki.com/">Italki</a> and choosing a teacher who can do test preparations. Your goal is not to prepare for any test, but those teachers tend to be very picky with all of your mistakes, which is fundamental for this phase.</p>
-        <p>Your daily task on <a href="https://www.lingq.com/en/">LingQ</a> is going to be the same, but now you need to choose lessons with new topics and advanced language. Besides that, your weekly writing task is to write one or two essays about those new topics. You should also watch a couple of YouTube videos about common pronunciation mistakes and try to fix them in your 45-minute classes twice a week.</p>
-        <table className={ getFinishedDays === '365' ? "white-background" : "table-background"}>
+        <h3 className="text-center p-3">Getting rid of your flaws:</h3>
+        <p className="text-center">It's time to broaden your horizons! Now you can already talk about different topics effortlesly, but your vocabulary is still limited to what you got in contact with and you still make a fair amount of mistakes. In order to reach higher levels, your approach is going to be quite different from the beginning. Your new focus is going to be on getting in contact with topics you haven't before, improving your speech, writing and pronunciation and stop making mistakes that native speakers wouldn't do. Now is a good time to think about changing tutors on <a href="https://www.italki.com/" className="text-purple hover:underline">Italki</a> and choosing a teacher who can do test preparations. Your goal is not to prepare for any test, but those teachers tend to be very picky with all of your mistakes, which is fundamental for this phase.</p>
+        <br />
+        <p  className="text-center p-3">Your daily task on <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> is going to be the same, but now you need to choose lessons with new topics and advanced language. Besides that, your weekly writing task is to write one or two essays about those new topics. You should also watch a couple of YouTube videos about common pronunciation mistakes and try to fix them in your 45-minute classes twice a week.</p>
+        <table className={ getFinishedDays === '365' ? "bg-gray-light" : "bg-gray-dark"}>
           <tbody>
             <tr>
-              { firstWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { secondWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { thirdWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fourthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fifthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { sixthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { seventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eighthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { ninthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { tenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eleventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twelfthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twelfthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { thirteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { thirteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fourteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fourteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fifteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fifteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { sixteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { sixteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { seventeenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { seventeenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eighteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eighteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { nineteenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { nineteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentiethWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentiethWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyFirstWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyFirstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentySecondWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentySecondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyThirdWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyThirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyFourthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyFourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentyFifthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentyFifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentySixthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentySixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { twentySeventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { twentySeventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
           </tbody>
         </table>
-        <h5>Total: 185 days(26,4 weeks).</h5>
+        <h5 className="text-center">Total: 185 days(26,4 weeks)</h5>
       </>
       )}
     </div>

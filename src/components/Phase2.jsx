@@ -22,12 +22,12 @@ function Phase2() {
   }
 
   function finishDay ({ target }) {
-    if (target.className !== "table-background") {
+    if (target.className !== "bg-gray-dark p-5") {
       localStorage.setItem('finishedDays2', target.innerHTML - 1)
-      return target.className="table-background";
+      return target.className="bg-gray-dark p-5";
     } else {
       localStorage.setItem('finishedDays2', target.innerHTML);
-      return target.className="cyan-background";
+      return target.className="bg-blue p-5";
     }
   }
 
@@ -58,55 +58,55 @@ function Phase2() {
 
   useEffect(() => {
     if (display === true) {
-      finishedDays.forEach(day => document.getElementById(day).className="cyan-background")
+      finishedDays.forEach(day => document.getElementById(day).className="bg-blue p-5")
     }
   }, [finishedDays])
 
   return (
-    <div className='cyan'>
-      <h2 className="table-background" onClick={ displaySection }>Phase 2</h2>
+    <div className="text-blue w-3/6">
+      <h2 className="bg-gray-dark text-center" onClick={ displaySection }>Phase 2</h2>
       { display && (
       <>
-        <h3>Building your basis in the foreign language:</h3>
-        <p>From now on, you will start using <a href="https://www.lingq.com/en/">LingQ</a> every single day during your way to C1 level. In this phase, your goal is to earn 1500 coins (30x streak) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
-        <table className={ getFinishedDays === '90' ? "cyan-background" : "table-background"}>
+        <h3 className="text-center p-3">Building your basis in the foreign language</h3>
+        <p className="text-center">From now on, you will start using <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> every single day during your way to C1 level. In this phase, your goal is to earn 1500 coins (30x streak) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
+        <table className={ getFinishedDays === '90' ? "bg-blue" : "bg-gray-dark"}>
           <tbody>
             <tr>
-              { firstWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { secondWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { thirdWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fourthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { fifthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { sixthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { seventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eighthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { ninthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { tenthWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
             <tr>
-              { eleventhWeek.map(day => <td id={ day } className="table-background" onClick={ finishDay }>{ day }</td>) }
+              { eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
             </tr>
           </tbody>
         </table>
-        <h5>Total: 76 days(10,8 weeks).</h5>
+        <h5 className="text-center">Total: 76 days(10,8 weeks)</h5>
       </>
       )}
     </div>
