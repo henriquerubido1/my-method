@@ -34,12 +34,12 @@ function Phase4() {
   const getFinishedDays = localStorage.getItem('finishedDays4');
 
   function finishDay ({ target }) {
-    if (target.className !== "bg-gray-dark  p-5") {
+    if (target.className !== "bg-gray-dark p-5") {
       localStorage.setItem('finishedDays4', target.innerHTML - 1)
-      return target.className="bg-gray-dark  p-5";
+      return target.className="bg-gray-dark p-5";
     } else {
       localStorage.setItem('finishedDays4', target.innerHTML);
-      return target.className="bg-gray-light  p-5";
+      return target.className="bg-gray-light p-5";
     }
   }
 
