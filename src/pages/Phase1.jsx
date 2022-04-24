@@ -33,7 +33,7 @@ function Phase1() {
       <h3 className="text-center p-3 text-2xl">Learning your very first words and sentence structures</h3>
       <p className="text-center mx-10">In this phase you are going to use <a href="https://www.duolingo.com/learn" className="text-purple hover:underline">Duolingo</a> for 2 weeks in order to learn your first words, so you can move on to <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a>. In this phase you are going to study for around an hour a day using the <a href="https://www.youtube.com/watch?v=qWTsFh8c37U" className="text-purple hover:underline">Cascading Method</a> (the explanation of the method starts at 8:00 minutes).</p>
       <div className="flex justify-center">
-        <table className="bg-gray-dark m-8">
+        <table className="m-8">
           <tbody>
             <tr>
               { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
