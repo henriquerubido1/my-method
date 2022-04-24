@@ -68,49 +68,70 @@ function Phase3() {
       <h1 className="text-center p-3 text-3xl">Phase 3</h1>
       <h3 className="text-center p-3 text-2xl">Developing your active skills</h3>
       <p className="text-center mx-10">Now you already have a basis in the language and you already understand around half of what we can call here as “real conversations”. Now is the time for you to start developing your active skills, which are speaking and writing. In order to do that, you need to start practicing them. You are still going to keep up with your <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> daily goal. Besides that, you are going to have conversation classes with a native speaker for 30 or 45 minutes per week on <a href="https://www.italki.com" className="text-purple hover:underline">Italki</a>. You should choose a teacher/tutor that offers you writing corrections, so you can write small texts each week in order to practice writing, too. At this point, you might realize that there are some essential words you don’t know yet. For those words you can use <a href="https://apps.ankiweb.net" className="text-purple hover:underline">Anki</a> to really make those words stick to your memory. But remember you should only choose those words you wanted to say/write in your classes/writings, but you couldn’t. Those are the words you lack!</p>
-      <table className={ getFinishedDays === '180' ? "bg-red mt-8" : "bg-gray-dark mt-8"}>
-        <tbody>
-          <tr>
-            { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
-            { twelfthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-          <tr>
+      <div className="flex justify-center">
+        <table className="m-8">
+          <tbody>
+            <tr>
+              { firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+          </tbody>
+        </table>
+        <table className="m-8">
+          <tbody>
+            <tr>
+              { fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="flex justify-center">
+        <table className="m-8">
+          <tbody>
+            <tr>
+              { ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+            <tr>
+              { twelfthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+            </tr>
+          </tbody>
+        </table>
+        <table className="m-8 h-1">
+          <tbody>
+            <tr>
             { thirteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-          </tr>
-        </tbody>
-      </table>
+            <td className={ getFinishedDays === '180' ? "bg-red p-5" : "bg-gray-dark p-5" }></td>
+            <td className={ getFinishedDays === '180' ? "bg-red p-5" : "bg-gray-dark p-5" }></td>
+            <td className={ getFinishedDays === '180' ? "bg-red p-5" : "bg-gray-dark p-5" }></td>
+            <td className={ getFinishedDays === '180' ? "bg-red p-5" : "bg-gray-dark p-5" }></td>
+            <td className={ getFinishedDays === '180' ? "bg-red p-5" : "bg-gray-dark p-5" }></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <h5 className="text-center">Total: 90 days(12,5 weeks)</h5>
     </div>
   )
