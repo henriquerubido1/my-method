@@ -6,6 +6,11 @@ import Phase3 from './pages/Phase3';
 import Phase4 from './pages/Phase4';
 import Mindset from './pages/Mindset';
 import NotFound from './pages/NotFound';
+import Phase1pt from './pages/Phase1pt';
+import Phase2pt from './pages/Phase2pt';
+import Phase3pt from './pages/Phase3pt';
+import Phase4pt from './pages/Phase4pt';
+import MindsetPt from './pages/MindsetPt';
 import './index.css';
 import './body.css';
 
@@ -20,6 +25,11 @@ function App() {
           <Route path="/phase3" component={ Phase3 } />
           <Route path="/phase4" component={ Phase4 } />
           <Route path="/mindset" component={ Mindset } />
+          <Route path="/pt/phase1" component={ Phase1pt } />
+          <Route path="/pt/phase2" component={ Phase2pt } />
+          <Route path="/pt/phase3" component={ Phase3pt } />
+          <Route path="/pt/phase4" component={ Phase4pt } />
+          <Route path="/pt/mindset" component={ MindsetPt } />
           <Route path="*" component={ NotFound } />
         </Switch>
       </BrowserRouter>

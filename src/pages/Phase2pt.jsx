@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
+import HeaderPt from '../components/HeaderPt';
 
-function Phase2() {
+function Phase2pt() {
   const primaryDays = [...Array(91).keys()];
   const days = primaryDays.slice(15);
   const firstWeek = days.filter(day => day < 22);
@@ -58,10 +58,10 @@ function Phase2() {
 
   return (
     <div className="text-blue">
-      <Header en="/phase2" pt="pt/phase2" />
-      <h1 className="text-center p-3 text-3xl">Phase 2</h1>
-      <h3 className="text-center p-3 text-2xl">Building your basis in the foreign language</h3>
-      <p className="text-center mx-10">From now on, you will start using <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> every single day during your way to C1 level. In this phase, your goal is to earn 1500 coins(30x daily goal) a day. “Coins earned” is the best way to measure how much contact with the language you are having, because this number is not as easy to manipulate as “time spent with the language” or “the number of words you know”.</p>
+      <HeaderPt en="/phase2" pt="/pt/phase2" />
+      <h1 className="text-center p-3 text-3xl">Fase 2</h1>
+      <h3 className="text-center p-3 text-2xl">Construindo sua base na língua</h3>
+      <p className="text-center mx-10">De agora em diante, você utilizará o <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> todos os dias durante a sua jornada para o nível C1. Nesta fase, a sua meta é ganhar 1500 moedas(30x meta diária) por dia. "Moedas recebidas”  é a melhor forma de medir quanto contato com a lígua nós estamos tendo, porque este número não é tão fácil de manipular quanto "tempo gasto com a língua” ou "número de palavras conhecidas”.</p>
       <div className="flex justify-center">
         <table className="m-8">
           <tbody>
@@ -111,9 +111,9 @@ function Phase2() {
           </tbody>
         </table>
       </div>
-      <h5 className="text-center">Total: 76 days(10,8 weeks)</h5>
+      <h5 className="text-center">Total: 76 dias(10,8 semanas)</h5>
     </div>
   )
 }
 
-export default Phase2;
+export default Phase2pt;

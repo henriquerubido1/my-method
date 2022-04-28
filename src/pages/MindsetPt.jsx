@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import HeaderPt from '../components/HeaderPt';
 import Mindset1 from '../components/Mindset1';
 import Mindset2 from '../components/Mindset2';
 import Mindset3 from '../components/Mindset3';
@@ -8,10 +8,10 @@ import Mindset5 from '../components/Mindset5';
 import Mindset6 from '../components/Mindset6';
 import FinalThoughts from '../components/FinalThoughts';
 
-function Mindset() {
+function MindsetPt() {
   return (
     <div className="text-blue text-center">
-			<Header en="/mindset" pt="pt/mindset" />
+			<HeaderPt en="/mindset" pt="pt/mindset" />
 			<h1 className="m-8 text-3xl">Mindset of the Language Learner</h1>
 			<div className="flex justify-center mb-10">
 				<Mindset1 />
@@ -38,4 +38,4 @@ function Mindset() {
   )
 }
 
-export default Mindset;
+export default MindsetPt;

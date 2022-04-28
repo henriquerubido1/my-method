@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
+import HeaderPt from '../components/HeaderPt';
 
-function Phase4() {
+function Phase4pt() {
   const primaryDays = [...Array(366).keys()];
   const days = primaryDays.slice(181);
   const firstWeek = days.filter(day => day < 188);
@@ -106,12 +106,12 @@ function Phase4() {
 
   return (
     <div className="text-gray-light">
-      <Header en="/phase4" pt="pt/phase4" />
-      <h1 className="text-center p-3 text-3xl">Phase 4</h1>
-      <h3 className="text-center p-3 text-2xl">Getting rid of your flaws</h3>
-      <p className="text-center mx-10">It's time to broaden your horizons! Now you can already talk about different topics effortlesly, but your vocabulary is still limited to what you got in contact with and you still make a fair amount of mistakes. In order to reach higher levels, your approach is going to be quite different from the beginning. Your new focus is going to be on getting in contact with topics you haven't before, improving your speech, writing and pronunciation and stop making mistakes that native speakers wouldn't do. Now is a good time to think about changing tutors on <a href="https://www.italki.com/" className="text-purple hover:underline">Italki</a> and choosing a teacher who can do test preparations. Your goal is not to prepare for any test, but those teachers tend to be very picky with all of your mistakes, which is fundamental for this phase.</p>
+      <HeaderPt en="/phase4" pt="pt/phase4" />
+      <h1 className="text-center p-3 text-3xl">Fase 4</h1>
+      <h3 className="text-center p-3 text-2xl">Livrando-se das suas falhas</h3>
+      <p className="text-center mx-10">É hora de expandir seus horizontes! Agora você já consegue falar sobre diferentes tópicos sem muito esforço, mas seu vocabulário ainda é limitado ao que você estrou em contato e você ainda erra com alguma frequência. Para alcançar níveis mais altos, sua abordagem passará a ser bem diferente do que era no começo. Seu novo foco será ter contato com tópicos que você não teve antes, melhorar sua fala, escrita e pronúncia. Além disso, parar de cometer erros que nativos não cometem. Agora é uma boa hora para pensar sobre trocar de tutor no <a href="https://www.italki.com/" className="text-purple hover:underline">Italki</a> e escolher um professor que faça preparatórios para testes. A sua meta não é se preparar para um teste, mas professores deste tipo tendem a ser bem meticulosos com cada um dos seus erros, o que é fundamental para esta fase.</p>
       <br />
-      <p  className="text-center mx-10">Your daily task on <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> is going to be the same, but now you need to choose lessons with new topics and advanced language. Besides that, your weekly writing task is to write one or two essays about those new topics. You should also watch a couple of YouTube videos about common pronunciation mistakes and try to correct them, especially during your 45-minute classes twice a week. Don't forget to always try to absorb your teacher's feedback. This is one of the most important parts of your classes.</p>
+      <p  className="text-center mx-10">Sua meta diária no <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> continua sendo a mesma, mas agora você deve escolher lições com novos tópicos e uma linguagem mais avançada. Além disso, sua tarefa de escrita semanal é escrever uma ou duas redações sobre esses tópicos novos e enviá-las para seu professor corrigi-las. Você também deve assistir alguns vídeos no YouTube sobre erros comuns de pronúncia na língua que você está aprendendo e tentar corrigí-los, especialmente durante suas aulas de 45 minutos, duas vezes por semana. Não se esqueça de sempre tentar absorver o feedback dado por seu professor, essa é uma das partes mais importantes das suas aulas.</p>
       <div className="flex justify-center">
         <table className="m-8">
           <tbody>
@@ -238,4 +238,4 @@ function Phase4() {
   )
 }
 
-export default Phase4;
+export default Phase4pt;

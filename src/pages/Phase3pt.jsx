@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
+import HeaderPt from '../components/HeaderPt';
 
-function Phase3() {
+function Phase3pt() {
   const primaryDays = [...Array(181).keys()];
   const days = primaryDays.slice(91);
   const firstWeek = days.filter(day => day < 98);
@@ -64,10 +64,10 @@ function Phase3() {
 
   return (
     <div className="text-red">
-      <Header en="/phase3" pt="pt/phase3" />
-      <h1 className="text-center p-3 text-3xl">Phase 3</h1>
-      <h3 className="text-center p-3 text-2xl">Developing your active skills</h3>
-      <p className="text-center mx-10">Now you have a base in the language, so it's time for you to start developing your active skills. Those are speaking and writing, and in order to do that, you need to start practicing them. You are still going to keep up with your <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a> daily goal. Besides that, you are going to have conversation classes with a native speaker for 30 or 45 minutes per week on <a href="https://www.italki.com" className="text-purple hover:underline">Italki</a>. You should choose a teacher/tutor that offers you writing corrections, so you can write small texts each week in order to practice writing, too. At this point, you might realize that there are some essential words you don’t know yet. For those words you can use <a href="https://apps.ankiweb.net" className="text-purple hover:underline">Anki</a> to really make those words stick to your memory. But remember you should only choose those words you wanted to say or write in your classes and writings, but you couldn’t. Those are the words you lack!</p>
+      <HeaderPt en="/phase3" pt="pt/phase3" />
+      <h1 className="text-center p-3 text-3xl">Fase 3</h1>
+      <h3 className="text-center p-3 text-2xl">Desenvolvendo suas habilidades ativas</h3>
+      <p className="text-center mx-10">Agora que você tem uma base no idioma, é hora de começar a desenvolver as suas habilidades ativas. Elas são a fala e a escrita, e para desenvolvê-las , é necessário começar a praticá-las. Você ainda manterá a sua meta diária no <a href="https://www.lingq.com/en/" className="text-purple hover:underline">LingQ</a>. Além disso, você começará a ter aulas de conversação com um nativo por 30 ou 45 minutos por semana no <a href="https://www.italki.com" className="text-purple hover:underline">Italki</a>. Você deve escolher um professor/tutor que oferece correções de escrita, para que você possa escrever pequenos textos toda semana para praticar a escrita também. Neste ponto, talvez você perceba que existem palavras essenciais que você ainda não sabe. Para estas palavras, você pode utilizar o <a href="https://apps.ankiweb.net" className="text-purple hover:underline">Anki</a> para finalmente aprender essas palavras. Mas lembre-se de que você deve escolher apenas aquelas palavras que você precisava ter dito ou escrito nas suas aulas e textos, mas você ainda não sabia estas palavras. Estas são as palavras que estão faltando!</p>
       <div className="flex justify-center">
         <table className="m-8">
           <tbody>
@@ -132,9 +132,9 @@ function Phase3() {
           </tbody>
         </table>
       </div>
-      <h5 className="text-center">Total: 90 days(12,5 weeks)</h5>
+      <h5 className="text-center">Total: 90 dias(12,5 semanas)</h5>
     </div>
   )
 }
 
-export default Phase3;
+export default Phase3pt;
