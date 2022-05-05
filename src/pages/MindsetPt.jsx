@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderPt from '../components/HeaderPt';
-import Mindset1 from '../components/Mindset1';
+import Mindset1pt from '../components/Mindset1pt';
 import Mindset2 from '../components/Mindset2';
 import Mindset3 from '../components/Mindset3';
 import Mindset4 from '../components/Mindset4';
@@ -12,9 +12,9 @@ function MindsetPt() {
   return (
     <div className="text-blue text-center">
 			<HeaderPt en="/mindset" pt="pt/mindset" />
-			<h1 className="m-8 text-3xl">Mindset of the Language Learner</h1>
+			<h1 className="m-8 text-3xl">Mentalidade do Estudante de Idiomas</h1>
 			<div className="flex justify-center mb-10">
-				<Mindset1 />
+				<Mindset1pt />
 			</div>
 			<div className="flex justify-center mb-10">
 				<Mindset2 />
