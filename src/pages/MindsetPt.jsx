@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderPt from '../components/HeaderPt';
 import Mindset1pt from '../components/Mindset1pt';
-import Mindset2 from '../components/Mindset2';
+import Mindset2pt from '../components/Mindset2pt';
 import Mindset3 from '../components/Mindset3';
 import Mindset4 from '../components/Mindset4';
 import Mindset5 from '../components/Mindset5';
@@ -17,7 +17,7 @@ function MindsetPt() {
 				<Mindset1pt />
 			</div>
 			<div className="flex justify-center mb-10">
-				<Mindset2 />
+				<Mindset2pt />
 			</div>
 			<div className="flex justify-center mb-10">
 				<Mindset3 />
