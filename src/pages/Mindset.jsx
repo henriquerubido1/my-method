@@ -9,8 +9,8 @@ import Mindset6 from '../components/Mindset6';
 import FinalThoughts from '../components/FinalThoughts';
 
 function Mindset() {
-  return (
-    <div className="text-blue text-center">
+	return (
+		<div className="text-blue text-center">
 			<Header en="/mindset" pt="pt/mindset" />
 			<h1 className="m-8 text-3xl">Mindset of the Language Learner</h1>
 			<div className="flex justify-center mb-10">
@@ -34,8 +34,8 @@ function Mindset() {
 			<div className="flex justify-center mb-10">
 				<FinalThoughts />
 			</div>
-    </div>
-  )
+		</div>
+	);
 }
 
 export default Mindset;
