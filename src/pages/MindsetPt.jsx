@@ -3,8 +3,8 @@ import HeaderPt from '../components/HeaderPt';
 import Mindset1pt from '../components/Mindset1pt';
 import Mindset2pt from '../components/Mindset2pt';
 import Mindset3pt from '../components/Mindset3pt';
-import Mindset4 from '../components/Mindset4';
-import Mindset5 from '../components/Mindset5';
+import Mindset4pt from '../components/Mindset4pt';
+import Mindset5pt from '../components/Mindset5pt';
 import Mindset6 from '../components/Mindset6';
 import FinalThoughts from '../components/FinalThoughts';
 
@@ -23,10 +23,10 @@ function MindsetPt() {
 				<Mindset3pt />
 			</div>
 			<div className="flex justify-center mb-10">
-				<Mindset4 />
+				<Mindset4pt />
 			</div>
 			<div className="flex justify-center mb-10">
-				<Mindset5 />
+				<Mindset5pt />
 			</div>
 			<div className="flex justify-center mb-10">
 				<Mindset6 />
