@@ -6,7 +6,7 @@ import Mindset3pt from '../components/Mindset3pt';
 import Mindset4pt from '../components/Mindset4pt';
 import Mindset5pt from '../components/Mindset5pt';
 import Mindset6pt from '../components/Mindset6pt';
-import FinalThoughts from '../components/FinalThoughts';
+import FinalThoughtsPt from '../components/FinalThoughtsPt';
 
 function MindsetPt() {
 	return (
@@ -32,7 +32,7 @@ function MindsetPt() {
 				<Mindset6pt />
 			</div>
 			<div className="flex justify-center mb-10">
-				<FinalThoughts />
+				<FinalThoughtsPt />
 			</div>
 		</div>
 	);

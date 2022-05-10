@@ -260,7 +260,7 @@ function Phase4pt() {
 					</tbody>
 				</table>
 			</div>
-			<h5 className="text-center">Total: 185 days(26,4 weeks)</h5>
+			<h5 className="text-center">Total: 185 dias(26,4 semanas)</h5>
 		</div>
 	);
 }
