@@ -10,11 +10,11 @@ const Header = (props) => {
 				<Link className="m-2 hover:underline" to={props.pt}>pt</Link>
 			</nav>
 			<nav>
-				<Link className="m-10 p-10 hover:underline" to="/">Phase 1</Link>
-				<Link className="m-10 p-10 hover:underline" to="/phase2">Phase 2</Link>
-				<Link className="m-10 p-10 hover:underline" to="/phase3">Phase 3</Link>
-				<Link className="m-10 p-10 hover:underline" to="/phase4">Phase 4</Link>
-				<Link className="m-10 p-10 hover:underline" to="/mindset">Mindset</Link>
+				<Link className="m-10 hover:underline" to="/">Phase 1</Link>
+				<Link className="m-10 hover:underline" to="/phase2">Phase 2</Link>
+				<Link className="m-10 hover:underline" to="/phase3">Phase 3</Link>
+				<Link className="m-10 hover:underline" to="/phase4">Phase 4</Link>
+				<Link className="m-10 hover:underline" to="/mindset">Mindset</Link>
 			</nav>
 		</div>
 	);
