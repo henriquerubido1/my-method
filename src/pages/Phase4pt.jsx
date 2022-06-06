@@ -32,15 +32,35 @@ function Phase4pt() {
 	const twentySixthWeek = days.filter(day => day > 355 && day < 363);
 	const twentySeventhWeek = days.filter(day => day > 362 && day < 366);
 	const getFinishedDays = localStorage.getItem('finishedDays');
+	const getClassDays = localStorage.getItem('finishedClasses');
+	const getWritingDays = localStorage.getItem('finishedWritings');
+	let checkClassDays = typeof JSON.parse(getClassDays) === 'number' ? JSON.parse(getClassDays) : 0;
+	let checkWritingDays = typeof JSON.parse(getWritingDays) === 'number' ? JSON.parse(getWritingDays) : 0;
 
 	function finishDay ({ target }) {
-		if (target.className !== 'bg-gray-dark p-5') {
+		if (target.className === 'bg-indigo p-5') {
+			localStorage.setItem('finishedClasses', checkClassDays += 1);
+			localStorage.setItem('finishedDays', target.innerHTML);
+			return target.className='bg-gray-light p-5';
+		} else if (target.className === 'bg-rose p-5') {
+			localStorage.setItem('finishedWritings', checkWritingDays += 1);
+			localStorage.setItem('finishedDays', target.innerHTML);
+			return target.className='bg-gray-light p-5';
+		} else if (target.className !== 'bg-gray-dark p-5') {
 			localStorage.setItem('finishedDays', target.innerHTML - 1);
 			return target.className='bg-gray-dark p-5';
-		} else {
+		}  else {
 			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-gray-light p-5';
 		}
+	}
+
+	function setClassDay ({ target }) {
+		target.className='bg-indigo p-5';
+	}
+
+	function setWritingDay ({ target }) {
+		target.className='bg-rose p-5';
 	}
 
 	const filterDays = firstWeek.filter((day) => day <= getFinishedDays);
@@ -117,61 +137,19 @@ function Phase4pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-					</tbody>
-				</table>
-				<table className="m-8">
-					<tbody>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div className="flex justify-center">
-				<table className="m-8">
-					<tbody>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-						</tr>
-						<tr>
-							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twelfthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 					</tbody>
 				</table>
@@ -179,19 +157,19 @@ function Phase4pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ thirteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ fourteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ fifteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ sixteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 					</tbody>
 				</table>
@@ -201,19 +179,19 @@ function Phase4pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ seventeenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ eighteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ nineteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentiethWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ twelfthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 					</tbody>
 				</table>
@@ -221,19 +199,19 @@ function Phase4pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentyFirstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ thirteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentySecondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ fourteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentyThirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ fifteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentyFourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ sixteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 					</tbody>
 				</table>
@@ -243,15 +221,57 @@ function Phase4pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentyFifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ seventeenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentySixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ eighteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ twentySeventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ nineteenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentiethWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+					</tbody>
+				</table>
+				<table className="m-8">
+					<tbody>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentyFirstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentySecondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentyThirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentyFourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div className="flex justify-center">
+				<table className="m-8">
+					<tbody>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentyFifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentySixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
+						</tr>
+						<tr>
+							{ /* eslint-disable-next-line react/jsx-key */ }
+							{ twentySeventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 							<td className={ getFinishedDays >= 365 ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
 							<td className={ getFinishedDays >= 365 ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
 							<td className={ getFinishedDays >= 365 ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
@@ -261,6 +281,7 @@ function Phase4pt() {
 				</table>
 			</div>
 			<h5 className="text-center">Total: 185 dias(26,4 semanas)</h5>
+			<p className="text-center opacity-75 text-sm">dica: você pode clicar com o botão direito e dar um clique duplo para marcar os dias em que você teve aula e os dias em que você escreveu redações, respectivamente</p>
 		</div>
 	);
 }

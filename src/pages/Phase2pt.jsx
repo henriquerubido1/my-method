@@ -16,15 +16,35 @@ function Phase2pt() {
 	const tenthWeek = days.filter(day => day > 77 && day < 85);
 	const eleventhWeek = days.filter(day => day > 84 && day < 91);
 	const getFinishedDays = localStorage.getItem('finishedDays');
+	const getClassDays = localStorage.getItem('finishedClasses');
+	const getWritingDays = localStorage.getItem('finishedWritings');
+	let checkClassDays = typeof JSON.parse(getClassDays) === 'number' ? JSON.parse(getClassDays) : 0;
+	let checkWritingDays = typeof JSON.parse(getWritingDays) === 'number' ? JSON.parse(getWritingDays) : 0;
 
 	function finishDay ({ target }) {
-		if (target.className !== 'bg-gray-dark p-5') {
+		if (target.className === 'bg-indigo p-5') {
+			localStorage.setItem('finishedClasses', checkClassDays += 1);
+			localStorage.setItem('finishedDays', target.innerHTML);
+			return target.className='bg-blue p-5';
+		} else if (target.className === 'bg-rose p-5') {
+			localStorage.setItem('finishedWritings', checkWritingDays += 1);
+			localStorage.setItem('finishedDays', target.innerHTML);
+			return target.className='bg-blue p-5';
+		} else if (target.className !== 'bg-gray-dark p-5') {
 			localStorage.setItem('finishedDays', target.innerHTML - 1);
 			return target.className='bg-gray-dark p-5';
-		} else {
+		}  else {
 			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-blue p-5';
 		}
+	}
+
+	function setClassDay ({ target }) {
+		target.className='bg-indigo p-5';
+	}
+
+	function setWritingDay ({ target }) {
+		target.className='bg-rose p-5';
 	}
 
 	const filterDays = firstWeek.filter((day) => day <= getFinishedDays);
@@ -68,19 +88,19 @@ function Phase2pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ firstWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ secondWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ thirdWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ fourthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 					</tbody>
 				</table>
@@ -88,19 +108,19 @@ function Phase2pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ fifthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ sixthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ seventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ eighthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 					</tbody>
 				</table>
@@ -110,21 +130,22 @@ function Phase2pt() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ ninthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ tenthWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							{ eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay } onAuxClick={ setClassDay } onDoubleClick={ setWritingDay }>{ day }</td>) }
 							<td className={ getFinishedDays >= 90 ? 'bg-blue p-5' : 'bg-gray-dark p-5' }></td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<h5 className="text-center">Total: 76 dias(10,8 semanas)</h5>
+			<p className="text-center opacity-75 text-sm">dica: você pode clicar com o botão direito e dar um clique duplo para marcar os dias em que você teve aula e os dias em que você escreveu redações, respectivamente</p>
 		</div>
 	);
 }
