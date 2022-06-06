@@ -69,7 +69,7 @@ function Phase1() {
 				</table>
 			</div>
 			<h5 className="text-center">Total: 14 days(2 weeks)</h5>
-			<p className="text-center opacity-75 text-sm">tip: you can click with the right button and double click to mark class days and days of writing, respectively</p>
+			{/* <p className="text-center opacity-75 text-sm">tip: you can click with the right button and double click to mark class days and days of writing, respectively</p> */}
 		</div>
 	);
 }
