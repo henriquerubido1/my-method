@@ -6,14 +6,14 @@ function Phase1pt() {
 	const days = primaryDays.slice(1);
 	const firstWeek = days.filter(day => day < 8);
 	const secondWeek = days.filter(day => day > 7);
-	const getFinishedDays = localStorage.getItem('finishedDays1');
+	const getFinishedDays = localStorage.getItem('finishedDays');
 
 	function finishDay ({ target }) {
 		if (target.className !== 'bg-gray-dark p-5') {
-			localStorage.setItem('finishedDays1', target.innerHTML - 1);
+			localStorage.setItem('finishedDays', target.innerHTML - 1);
 			return target.className='bg-gray-dark p-5';
 		} else {
-			localStorage.setItem('finishedDays1', target.innerHTML);
+			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-green p-5';
 		}
 	}

@@ -6,7 +6,7 @@ function Phase1() {
 	const days = primaryDays.slice(1);
 	const firstWeek = days.filter(day => day < 8);
 	const secondWeek = days.filter(day => day > 7);
-	const getFinishedDays = localStorage.getItem('finishedDays1');
+	const getFinishedDays = localStorage.getItem('finishedDays');
 	const getClassDays = localStorage.getItem('finishedClasses');
 	const getWritingDays = localStorage.getItem('finishedWritings');
 	let checkClassDays = typeof JSON.parse(getClassDays) === 'number' ? JSON.parse(getClassDays) : 0;
@@ -17,17 +17,17 @@ function Phase1() {
 	function finishDay ({ target }) {
 		if (target.className === 'bg-indigo p-5') {
 			localStorage.setItem('finishedClasses', checkClassDays += 1);
-			localStorage.setItem('finishedDays1', target.innerHTML);
+			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-green p-5';
 		} else if (target.className === 'bg-rose p-5') {
 			localStorage.setItem('finishedWritings', checkWritingDays += 1);
-			localStorage.setItem('finishedDays1', target.innerHTML);
+			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-green p-5';
 		} else if (target.className !== 'bg-gray-dark p-5') {
-			localStorage.setItem('finishedDays1', target.innerHTML - 1);
+			localStorage.setItem('finishedDays', target.innerHTML - 1);
 			return target.className='bg-gray-dark p-5';
 		}  else {
-			localStorage.setItem('finishedDays1', target.innerHTML);
+			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-green p-5';
 		}
 	}

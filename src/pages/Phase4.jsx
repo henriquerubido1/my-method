@@ -31,14 +31,14 @@ function Phase4() {
 	const twentyFifthWeek = days.filter(day => day > 348 && day < 356);
 	const twentySixthWeek = days.filter(day => day > 355 && day < 363);
 	const twentySeventhWeek = days.filter(day => day > 362 && day < 366);
-	const getFinishedDays = localStorage.getItem('finishedDays4');
+	const getFinishedDays = localStorage.getItem('finishedDays');
 
 	function finishDay ({ target }) {
 		if (target.className !== 'bg-gray-dark p-5') {
-			localStorage.setItem('finishedDays4', target.innerHTML - 1);
+			localStorage.setItem('finishedDays', target.innerHTML - 1);
 			return target.className='bg-gray-dark p-5';
 		} else {
-			localStorage.setItem('finishedDays4', target.innerHTML);
+			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-gray-light p-5';
 		}
 	}
@@ -254,10 +254,10 @@ function Phase4() {
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
 							{ twentySeventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
-							<td className={ getFinishedDays === '365' ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
-							<td className={ getFinishedDays === '365' ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
-							<td className={ getFinishedDays === '365' ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
-							<td className={ getFinishedDays === '365' ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
+							<td className={ getFinishedDays >= 365 ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
+							<td className={ getFinishedDays >= 365 ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
+							<td className={ getFinishedDays >= 365 ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
+							<td className={ getFinishedDays >= 365 ? 'bg-gray-light p-5' : 'bg-gray-dark p-5' }></td>
 						</tr>
 					</tbody>
 				</table>

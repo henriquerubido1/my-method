@@ -15,14 +15,14 @@ function Phase2pt() {
 	const ninthWeek = days.filter(day => day > 70 && day < 78);
 	const tenthWeek = days.filter(day => day > 77 && day < 85);
 	const eleventhWeek = days.filter(day => day > 84 && day < 91);
-	const getFinishedDays = localStorage.getItem('finishedDays2');
+	const getFinishedDays = localStorage.getItem('finishedDays');
 
 	function finishDay ({ target }) {
 		if (target.className !== 'bg-gray-dark p-5') {
-			localStorage.setItem('finishedDays2', target.innerHTML - 1);
+			localStorage.setItem('finishedDays', target.innerHTML - 1);
 			return target.className='bg-gray-dark p-5';
 		} else {
-			localStorage.setItem('finishedDays2', target.innerHTML);
+			localStorage.setItem('finishedDays', target.innerHTML);
 			return target.className='bg-blue p-5';
 		}
 	}
@@ -106,7 +106,7 @@ function Phase2pt() {
 				</table>
 			</div>
 			<div className="flex justify-center">
-				<table className={ getFinishedDays === '90' ? 'bg-blue m-8' : 'bg-gray-dark m-8'}>
+				<table className='m-8'>
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
@@ -119,6 +119,7 @@ function Phase2pt() {
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
 							{ eleventhWeek.map(day => <td id={ day } className="bg-gray-dark p-5" onClick={ finishDay }>{ day }</td>) }
+							<td className={ getFinishedDays >= 90 ? 'bg-blue p-5' : 'bg-gray-dark p-5' }></td>
 						</tr>
 					</tbody>
 				</table>
