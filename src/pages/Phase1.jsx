@@ -54,6 +54,7 @@ function Phase1() {
 			<h1 className="text-center p-3 text-3xl">Phase 1</h1>
 			<h3 className="text-center p-3 text-2xl">Learning your very first words and sentence structures</h3>
 			<p className="text-center mx-10">In this phase you are going to use <a href="https://www.duolingo.com/learn" className="text-violet hover:underline">Duolingo</a> for 2 weeks in order to learn your first words, so you can move on to <a href="https://www.lingq.com/en/" className="text-violet hover:underline">LingQ</a>. In this phase you are going to study for around an hour a day using the <a href="https://www.youtube.com/watch?v=qWTsFh8c37U" className="text-violet hover:underline">Cascading Method</a> (the explanation of the method starts at 8:00 minutes).</p>
+			<p className="text-center mx-10 opacity-75">tip: <a href="https://www.lingodeer.com/home" className="text-violet hover:underline">Lingodeer</a> tend to be better than <a href="https://www.duolingo.com/learn" className="text-violet hover:underline">Duolingo</a> for asian languages</p>
 			<div className="flex justify-center">
 				<table className="m-8">
 					<tbody>
