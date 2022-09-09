@@ -3,9 +3,7 @@ module.exports = {
 	theme: {
 		extend: {},
 		colors: {
-			'green': '#13ce66',
-			'blue': '#1fb6ff',
-			'indigo': '#312e81',
+			'sky': '#1fb6ff',
 			'red': '#e11d48',
 			'rose': '#881337',
 			'violet': '#7e5bef',
@@ -13,6 +11,7 @@ module.exports = {
 			'pink': '#ff49db',
 			'slate': '#0f172a',
 			'gray-dark': '#273444',
+
 			'gray': '#8492a6',
 			'white': '#fafafa',
 			'light-gray': '#d1d5db',
