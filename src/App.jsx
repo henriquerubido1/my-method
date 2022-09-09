@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Phase1 from './pages/Phase1';
-import Phase2 from './pages/Phase2';
-import Phase3 from './pages/Phase3';
-import Phase4 from './pages/Phase4';
-import Mindset from './pages/Mindset';
-import NotFound from './pages/NotFound';
+import Phase1 from './pages/en/Phase1';
+import Phase2 from './pages/en/Phase2';
+import Phase3 from './pages/en/Phase3';
+import Phase4 from './pages/en/Phase4';
+import Mindset from './pages/en/Mindset';
 import Phase1pt from './pages/pt/Phase1pt';
 import Phase2pt from './pages/pt/Phase2pt';
 import Phase3pt from './pages/pt/Phase3pt';
 import Phase4pt from './pages/pt/Phase4pt';
 import MindsetPt from './pages/pt/MindsetPt';
+import NotFound from './pages/NotFound';
 import './index.css';
 import './body.css';
 
