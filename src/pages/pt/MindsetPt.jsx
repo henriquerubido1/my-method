@@ -1,12 +1,12 @@
 import React from 'react';
-import HeaderPt from '../components/HeaderPt';
-import Mindset1pt from '../components/Mindset1pt';
-import Mindset2pt from '../components/Mindset2pt';
-import Mindset3pt from '../components/Mindset3pt';
-import Mindset4pt from '../components/Mindset4pt';
-import Mindset5pt from '../components/Mindset5pt';
-import Mindset6pt from '../components/Mindset6pt';
-import FinalThoughtsPt from '../components/FinalThoughtsPt';
+import HeaderPt from '../../components/pt/HeaderPt';
+import Mindset1pt from '../../components/pt/Mindset1pt';
+import Mindset2pt from '../../components/pt/Mindset2pt';
+import Mindset3pt from '../../components/pt/Mindset3pt';
+import Mindset4pt from '../../components/pt/Mindset4pt';
+import Mindset5pt from '../../components/pt/Mindset5pt';
+import Mindset6pt from '../../components/pt/Mindset6pt';
+import FinalThoughtsPt from '../../components/pt/FinalThoughtsPt';
 
 function MindsetPt() {
 	return (

@@ -6,11 +6,11 @@ import Phase3 from './pages/Phase3';
 import Phase4 from './pages/Phase4';
 import Mindset from './pages/Mindset';
 import NotFound from './pages/NotFound';
-import Phase1pt from './pages/Phase1pt';
-import Phase2pt from './pages/Phase2pt';
-import Phase3pt from './pages/Phase3pt';
-import Phase4pt from './pages/Phase4pt';
-import MindsetPt from './pages/MindsetPt';
+import Phase1pt from './pages/pt/Phase1pt';
+import Phase2pt from './pages/pt/Phase2pt';
+import Phase3pt from './pages/pt/Phase3pt';
+import Phase4pt from './pages/pt/Phase4pt';
+import MindsetPt from './pages/pt/MindsetPt';
 import './index.css';
 import './body.css';
 

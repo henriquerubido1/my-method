@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import HeaderPt from '../components/HeaderPt';
+import HeaderPt from '../../components/pt/HeaderPt';
 
 function Phase3pt() {
 	const primaryDays = [...Array(181).keys()];
