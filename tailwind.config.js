@@ -14,8 +14,14 @@ module.exports = {
 			'slate': '#0f172a',
 			'gray-dark': '#273444',
 			'gray': '#8492a6',
-			'gray-light': '#94a3b8',
-			'white': '#ffffff',
+			'white': '#fafafa',
+			'light-gray': '#d1d5db',
+			'dark-gray': '#424242',
+			'dark-zinc': '#27272a',
+			'darker-zinc': '#18181b',
+			'black': '#171717',
+			'salmon': '#f87171',
+			'salmon-two': '#fca5a5',
 
 		},
 		fontFamily: {

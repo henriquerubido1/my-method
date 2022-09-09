@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const Header = (props) => {
 	const getStreak = Number(localStorage.getItem('finishedDays')) + 1;
 	return (
-		<div className="bg-gray-dark text-center">
+		<div className="bg-dark-zinc text-center">
 			<div className="flex justify-between">
-				<nav>
+				<nav className="opacity-75">
 					<Link className="m-2 underline" to={props.en}>en</Link>
 					<Link className="m-2 hover:underline" to={props.pt}>pt</Link>
 				</nav>
