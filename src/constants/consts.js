@@ -1,13 +1,15 @@
-export const checkedStyle = 'bg-light-gray p-5 ease-in duration-150';
+export const primaryDays = [...Array(15).keys()];
 
-export const uncheckedStyle = 'bg-dark-gray p-5 hover:bg-gray-light hover:text-violet hover:font-bold ease-in duration-150';
+export const days = primaryDays.slice(1);
 
-export const duolingo = 'https://www.duolingo.com/learn';
+export const firstWeek = days.filter(day => day < 8);
 
-export const lingQ = 'https://www.lingq.com/en/';
+export const secondWeek = days.filter(day => day > 7);
 
-export const italki = 'aa';
+export const getFinishedDays = localStorage.getItem('finishedDays');
 
-export const anki = 'aaa';
+const filterDays = firstWeek.filter((day) => day <= getFinishedDays);
 
-export const lingodeer = 'https://www.lingodeer.com/home';
+const filterDays2 = secondWeek.filter((day) => day <= getFinishedDays);
+
+export const finishedDays = [...filterDays, ...filterDays2];

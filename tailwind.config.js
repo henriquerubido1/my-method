@@ -5,14 +5,7 @@ module.exports = {
 		colors: {
 			'sky': '#1fb6ff',
 			'red': '#e11d48',
-			'rose': '#881337',
 			'violet': '#7e5bef',
-			'purple': '#581c87',
-			'pink': '#ff49db',
-			'slate': '#0f172a',
-			'gray-dark': '#273444',
-
-			'gray': '#8492a6',
 			'white': '#fafafa',
 			'light-gray': '#d1d5db',
 			'dark-gray': '#424242',
