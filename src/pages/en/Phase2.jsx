@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import Header from '../../components/en/Header';
-import { checkedStyle, uncheckedStyle } from '../../constants/styles';
+import {
+	checkedStyle,
+	uncheckedStyle,
+	emptyTdCheckedStyle,
+	emptyTdUncheckedStyle,
+} from '../../constants/styles';
 import { lingQ } from '../../constants/links';
 import { finishDay } from '../../functions/funcs';
 import { getFinishedDays } from '../../constants/consts';
@@ -87,7 +92,7 @@ function Phase2() {
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
 							{ eleventhWeek.map(day => <td id={ day } className={ uncheckedStyle } onClick={ finishDay }>{ day }</td>) }
-							<td className={ getFinishedDays >= 90 ? checkedStyle : uncheckedStyle }></td>
+							<td className={ getFinishedDays >= 90 ? emptyTdCheckedStyle : emptyTdUncheckedStyle }></td>
 						</tr>
 					</tbody>
 				</table>
