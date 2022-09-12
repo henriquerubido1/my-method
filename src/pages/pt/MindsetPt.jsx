@@ -10,7 +10,7 @@ import FinalThoughtsPt from '../../components/pt/FinalThoughtsPt';
 
 function MindsetPt() {
 	return (
-		<div className="text-blue text-center">
+		<div className="text-light-gray text-center">
 			<HeaderPt en="/mindset" pt="pt/mindset" />
 			<h1 className="m-8 text-3xl">Mentalidade do Estudante de Idiomas</h1>
 			<div className="flex justify-center mb-10">
