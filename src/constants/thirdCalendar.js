@@ -29,6 +29,7 @@ const filterDays10 = tenthWeek.filter((day) => day <= getFinishedDays);
 const filterDays11 = eleventhWeek.filter((day) => day <= getFinishedDays);
 const filterDays12 = twelfthWeek.filter((day) => day <= getFinishedDays);
 const filterDays13 = thirteenthWeek.filter((day) => day <= getFinishedDays);
+
 export const finishedDays = [
 	...filterDays,
 	...filterDays2,

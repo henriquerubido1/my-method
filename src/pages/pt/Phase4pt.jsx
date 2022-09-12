@@ -280,7 +280,7 @@ function Phase4pt() {
 					</tbody>
 				</table>
 			</div>
-			<h5 className="text-center">Total: 185 dias(26,4 semanas)</h5>
+			<h5 className="text-center my-5">Total: 185 dias(26,4 semanas)</h5>
 			{/* <p className="text-center opacity-75 text-sm">dica: você pode clicar com o botão direito e dar um clique duplo para marcar os dias em que você teve aula e os dias em que você escreveu redações, respectivamente</p> */}
 		</div>
 	);

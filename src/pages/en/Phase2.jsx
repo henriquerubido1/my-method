@@ -93,7 +93,7 @@ function Phase2() {
 				</table>
 			</div>
 			<hr className='mx-auto w-3/5' />
-			<h5 className="text-center mt-5">Total: 76 days(10,8 weeks)</h5>
+			<h5 className="text-center my-5">Total: 76 days(10,8 weeks)</h5>
 		</div>
 	);
 }
