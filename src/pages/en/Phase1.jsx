@@ -22,11 +22,11 @@ function Phase1() {
 					<tbody>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ firstWeek.map(day => <td id={ day } className={uncheckedStyle} onClick={ finishDay }>{ day }</td>) }
+							{ firstWeek.map(day => <td id={ day } className={ uncheckedStyle } onClick={ finishDay }>{ day }</td>) }
 						</tr>
 						<tr>
 							{ /* eslint-disable-next-line react/jsx-key */ }
-							{ secondWeek.map(day => <td id={ day } className={uncheckedStyle} onClick={ finishDay }>{ day }</td>) }
+							{ secondWeek.map(day => <td id={ day } className={ uncheckedStyle } onClick={ finishDay }>{ day }</td>) }
 						</tr>
 					</tbody>
 				</table>
